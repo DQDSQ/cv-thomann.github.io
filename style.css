@@ -193,7 +193,7 @@ a:hover {
 }
 
 @media print {
-    .pdf-btn { display: none; } /* Cache le bouton sur le PDF final */
+    .pdf-btn { display: none; } 
     body { background-color: white; }
     .container { box-shadow: none; margin: 0; width: 100%; }
 }
