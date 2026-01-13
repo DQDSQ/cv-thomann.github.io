@@ -1,0 +1,210 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Ajout du défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    color: #0a3d62;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header h2 {
+    font-size: 1.3em;
+    color: #444;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.header .tagline {
+    margin-top: 10px;
+    font-style: italic;
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+/* STYLE DU BOUTON PDF */
+.pdf-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pdf-btn:hover {
+    background-color: #1e6091;
+    transform: scale(1.05);
+}
+
+/* INFOS BAR */
+.infos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    font-size: 0.9em;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 35px;
+}
+
+section h3 {
+    color: #0a3d62;
+    border-bottom: 3px solid #0a3d62;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+/* TEXTE DE PROFIL */
+.profile p {
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #444;
+}
+
+.profile strong {
+    color: #0a3d62;
+}
+
+/* LISTES & LIENS D'ANCRES */
+.list-design li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.list-design li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+/* Style spécifique pour le lien vers le diplôme */
+.list-design li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.list-design li a:hover {
+    color: #1e6091;
+    text-decoration: underline;
+}
+
+/* COMPÉTENCES */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background-color: #e1e8ed;
+    color: #0a3d62;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid #0a3d62;
+}
+
+.skills span:hover {
+    background-color: #0a3d62;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* MISE EN PAGE BAS */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* LIENS GÉNÉRAUX */
+a {
+    color: #0a3d62;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1e6091;
+    text-decoration: underline;
+}
+
+/* SECTION PHOTO DIPLOME */
+.photo-cv img {
+    border: 2px solid #0a3d62;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE & IMPRESSION */
+@media (max-width: 650px) {
+    .container { padding: 20px; margin: 10px; }
+    .header h1 { font-size: 2em; }
+    .bottom-grid { grid-template-columns: 1fr; }
+    .infos { flex-direction: column; gap: 5px; }
+}
+
+@media print {
+    .pdf-btn { display: none; } /* Cache le bouton sur le PDF final */
+    body { background-color: white; }
+    .container { box-shadow: none; margin: 0; width: 100%; }
+}
+
+.cv-footer {
+    text-align: center; 
+    margin-top: 40px;   
+    padding: 20px 0;    
+    width: 100%;        
+    color: #666;        
+    font-size: 0.9em;
+    border-top: 1px solid #eee; 
+}
